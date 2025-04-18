@@ -7,7 +7,7 @@ def db_connect():
             host="localhost",
             user="root",
             password="",
-            database="nyilvantartas"
+            database="gyümölcsök"
         )
         return conn if conn.is_connected() else None
     except Error as e:
