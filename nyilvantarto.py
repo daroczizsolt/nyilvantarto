@@ -5,7 +5,9 @@ import os
 from models import Partner, Gyumolcsok, Kisszallitasok
 from functions import kiszallitasok_listaz, partnerekListaz, gyumolcsokListaz, ujpartnerfelvitel, KiszallitasBeszur
 
-os.chdir('G:/01_python_maganorak/Julcsi/nyilvantarto/nyilvantarto')
+#os.chdir('C:/Users/Admin/OneDrive/Asztali gép/phyton')
+os.chdir('C:/Users/Admin/OneDrive/Asztali gép/phyton')
+
 #Új üzilala
 class NyilvantartoApp:
     def __init__(self, root):
