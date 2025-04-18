@@ -6,7 +6,7 @@ from models import Partner, Gyumolcsok, Kisszallitasok
 from functions import kiszallitasok_listaz, partnerekListaz, gyumolcsokListaz, ujpartnerfelvitel, KiszallitasBeszur
 
 os.chdir('G:/01_python_maganorak/Julcsi/nyilvantarto/nyilvantarto')
-
+#Új üzi
 class NyilvantartoApp:
     def __init__(self, root):
         self.root = root
