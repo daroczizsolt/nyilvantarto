@@ -14,7 +14,7 @@ class NyilvantartoApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Admin felület")
-        self.root.geometry("750x320")
+        self.root.geometry("750x360")
         self.setup_gui()
         self.update_listak()
 
@@ -45,6 +45,8 @@ class NyilvantartoApp:
         self.gombpartnerek.grid(row=2, column=0, columnspan=2, pady=10)
 
         # Panel1: Kiszállítás felvitel
+        
+      
         Label(self.panel1,width="20", text="Kiszállítások listája", bg="#36719F", fg="white", font=("Arial", 12, "bold")).grid(row=0, columnspan=2, column=2, pady=(10, 10), padx=(20, 20))
         Label(self.panel1,width="20", text="Kiszállítások felvitele", bg="#4CAF50", fg="white", font=("Arial", 12, "bold")).grid(row=0, columnspan=2, column=0, pady=(10, 10), padx=(20, 20))
         
@@ -66,13 +68,19 @@ class NyilvantartoApp:
 
         self.gomb = ctk.CTkButton(self.panel1, text="Adatok mentése", command=self.kiszallitas_beszur)
         self.gomb.grid(row=5, column=0, columnspan=2, pady=10)
-
+        
+        Label(self.panel1, text="Szűrő:").grid(row=1, column=2, pady=(20, 5))
+        self.search_entry = Entry(self.panel1, width="30")
+        self.search_entry.grid(row=1, column=3, pady=(20, 5))  
+        self.search_button = ctk.CTkButton(self.panel1, text="Szűrés", width=10)
+        self.search_button.grid(row=1, column=4, pady=(20, 5))
+        
         self.trv = ttk.Treeview(self.panel1, columns=("1", "2", "3", "4"), show='headings')
         self.trv.heading("1", text="Dátum")
         self.trv.heading("2", text="Partner név")
         self.trv.heading("3", text="Kartonszám")
         self.trv.heading("4", text="Gyümölcs név")
-        self.trv.grid(row=1, column=2, rowspan=5, padx=10)
+        self.trv.grid(row=2, column=2,columnspan=3, rowspan=5, padx=10)
         
         self.trv.column("1", width=100, anchor="center")
         self.trv.column("2", width=140, anchor="w")
