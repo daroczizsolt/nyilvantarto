@@ -6,7 +6,7 @@ import customtkinter as ctk
 import os
 from tkinter import messagebox
 
-
+#comment teszt
 os.chdir('G:/05_adatbáziskezelés/Julcsi/gyumolcs')
 
 class Gyumolcsok:
